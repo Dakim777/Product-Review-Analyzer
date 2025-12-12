@@ -151,7 +151,7 @@ npm run dev
 
 ### Ringkasan AI dengan Gemini
 ![AI Summary](./screenshots/ai-summary.png)
-*Ringkasan otomatis yang dihasilkan oleh Google Gemini 2.0 Flash dalam 3 poin penting dari ulasan.*
+*Ringkasan otomatis yang dihasilkan oleh Google Gemini 2.5 Flash dalam 3 poin penting dari ulasan.*
 
 ### Riwayat Analisis
 ![History](./screenshots/history.png)
