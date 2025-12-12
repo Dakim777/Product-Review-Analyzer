@@ -13,12 +13,12 @@ Aplikasi ini dapat mendeteksi sentimen (Positif/Negatif/Netral) termasuk **Slang
 
 ## ✨ Fitur
 
-- ** Analisis Teks:** Input ulasan produk dalam Bahasa Inggris atau Indonesia (formal/slang).
-- ** Analisis Sentimen Tingkat Lanjut:** Menggunakan `w11wo/indonesian-roberta-base-sentiment-classifier` untuk akurasi tinggi pada konteks Indonesia.
-- ** Ringkasan AI:** Secara otomatis mengekstrak 3 poin penting menggunakan **Google Gemini 2.0 Flash**.
-- ** Penyimpanan Persisten:** Menyimpan semua riwayat analisis ke database **PostgreSQL**.
-- ** UI Modern:** Interface responsif dibangun dengan React, Tailwind CSS, dan desain Glassmorphism.
-- ** Personal Branding:** Integrasi aset dan identitas khusus.
+- **Analisis Teks:** Input ulasan produk dalam Bahasa Inggris atau Indonesia (formal/slang).
+- **Analisis Sentimen Tingkat Lanjut:** Menggunakan `w11wo/indonesian-roberta-base-sentiment-classifier` untuk akurasi tinggi pada konteks Indonesia.
+- **Ringkasan AI:** Secara otomatis mengekstrak 3 poin penting menggunakan **Google Gemini 2.0 Flash**.
+- **Penyimpanan Persisten:** Menyimpan semua riwayat analisis ke database **PostgreSQL**.
+- **UI Modern:** Interface responsif dibangun dengan React, Tailwind CSS, dan desain Glassmorphism.
+- **Personal Branding:** Integrasi aset dan identitas khusus.
 
 ---
 
