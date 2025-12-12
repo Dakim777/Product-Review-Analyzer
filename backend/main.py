@@ -1,5 +1,5 @@
 import os
-import re  # 
+import re  
 import google.generativeai as genai
 from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
@@ -65,9 +65,9 @@ def get_db():
 
 # --- FUNGSI PEMBERSIH TEXT (Hapus Markdown) ---
 def clean_markdown(text):
-    # Hapus bold (**text**)
+   
     text = re.sub(r'\*\*(.*?)\*\*', r'\1', text)
-    # Hapus bullet points (* di awal kalimat)
+   
     text = text.replace('* ', '• ')
     return text
 
@@ -75,14 +75,14 @@ def clean_markdown(text):
 async def analyze_review(review: ReviewCreate, db: Session = Depends(get_db)):
     try:
         # 1. ANALISIS SENTIMEN (Model Bintang)
-        # Output mentah: "5 stars", "4 stars", "1 star"
+       
         hf_result = sentiment_pipeline(review.text)[0]
         raw_label = hf_result['label'] 
         
-        # Ambil angka bintangnya (misal "4 stars" -> 4)
+       
         star_rating = int(raw_label.split()[0])
         
-        # Tentukan Label (Positif/Negatif)
+       
         if star_rating >= 4:
             final_label = "POSITIVE"
         elif star_rating == 3:
@@ -90,14 +90,14 @@ async def analyze_review(review: ReviewCreate, db: Session = Depends(get_db)):
         else:
             final_label = "NEGATIVE"
         
-        # Tampilkan Score sebagai "X/5 Stars"
+      
         final_score = f"{star_rating}/5 Stars"
 
         # 2. RINGKASAN POIN (Gemini)
         prompt = f"Buatkan 3 poin ringkasan singkat (bullet points) dalam Bahasa Indonesia dari review ini: '{review.text}'"
         ai_response = gemini_model.generate_content(prompt)
         
-        # BERSIHKAN output Gemini dari simbol Markdown (** atau *)
+      
         clean_summary = clean_markdown(ai_response.text)
         
         # 3. SIMPAN KE DATABASE

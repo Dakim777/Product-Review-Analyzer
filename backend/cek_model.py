@@ -1,7 +1,6 @@
 import google.generativeai as genai
 import os
 
-# GANTI API KEY INI DENGAN PUNYA ANDA
 API_KEY = "AIzaSyDKFJj-MgntmAiyYRgxrp89pte4ZajrRq0"
 
 genai.configure(api_key=API_KEY)
