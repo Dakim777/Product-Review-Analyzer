@@ -7,7 +7,7 @@
 
 Aplikasi AI Fullstack untuk menganalisis ulasan pelanggan menggunakan **Natural Language Processing (NLP)** dan **Generative AI**.
 
-Aplikasi ini dapat mendeteksi sentimen (Positif/Negatif/Netral) termasuk **Slang Indonesia** (contoh: *"Gila bagus banget"*) dan menghasilkan ringkasan singkat menggunakan **Google Gemini 2.5**.
+Aplikasi ini dapat mendeteksi sentimen (Positif/Negatif/Netral) termasuk **Bahasa Indonesia/Inggris** 
 
 ---
 
